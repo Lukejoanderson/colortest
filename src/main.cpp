@@ -106,11 +106,11 @@ void RGB2HSV(int rgb[], double hsv[])
   }
   else if (cmax==G)
   {
-    hsv[1]=60*((B-R)/delta+2);
+    hsv[0]=60*((B-R)/delta+2);
   }
   else
   {
-    hsv[1]=60*((R-G)/delta+4);
+    hsv[0]=60*((R-G)/delta+4);
   }
   if (cmax==0)
   {

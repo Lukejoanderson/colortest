@@ -60,7 +60,7 @@ void loop() {
   Serial.print(" Value: ");
   Serial.print(HSV[2]);
   Serial.println();
-if (HSV[0]>=70&&HSV[0]<=260&&HSV[1]>.25&&HSV[2]>.1)
+if (HSV[0]>=70&&HSV[0]<=260&&HSV[1]>.4&&HSV[2]>.3)
 {
   Serial.println("That's Recycling");
 }
@@ -76,11 +76,11 @@ else
 
 void reorgRGB(int rgb[])
  {
-    rgb[0]=rgb[0]*3.9584-46.958;
+    rgb[0]=rgb[0]*5.0604+9.7535;
     rgb[0]=min(max(rgb[0],0),255);
-    rgb[1]=rgb[1]*2.0098-21.194;
+    rgb[1]=rgb[1]*2.8581+36.832;
     rgb[1]=min(max(rgb[1],0),255);
-    rgb[2]=rgb[2]*3.0622-195.16;
+    rgb[2]=rgb[2]*4.733-23.635;
     rgb[2]=min(max(rgb[2],0),255);
 }
 
